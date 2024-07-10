@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-sans cursor-default antialiased transition-all;
+}
+
+svg {
+  @apply transition-none;
+}
+
+button {
+  @apply cursor-default;
+}
+
+html {
+  @apply select-none selection:bg-yellow-400 selection:text-black;
+}
+
+
+body {
+  color: #ededed;
+  background: #0a0a0a;
+  font-synthesis: none;
+}
