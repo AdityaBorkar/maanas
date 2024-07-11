@@ -1,9 +1,11 @@
+'use client'
+
 import { useMemo, useState } from 'react'
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi2'
 import { twMerge } from 'tailwind-merge'
 
 export default function Calendar(props: {
-	state?: [date: Date, setDate: (date: Date) => void]
+	state: [date: Date, setDate: (date: Date) => void]
 	className?: string
 }) {
 	const [date, setDate] = props.state
@@ -79,9 +81,9 @@ export default function Calendar(props: {
 							className={twMerge(
 								'flex size-12 items-center justify-center rounded-md bg-neutral-950 text-neutral-400',
 								!day.current && 'text-neutral-600',
-								dateString === date.toLocaleDateString() ?
-									'bg-neutral-200 font-medium text-black'
-								:	'hover:bg-neutral-900',
+								dateString === date.toLocaleDateString()
+									? 'bg-neutral-200 font-medium text-black'
+									: 'hover:bg-neutral-900',
 							)}
 						>
 							{day.dateNum}

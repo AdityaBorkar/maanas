@@ -12,7 +12,7 @@ import {
 import { LuHistory } from 'react-icons/lu'
 
 const Navigation = [
-	{ name: 'Home', path: '/', icon: FiAirplay },
+	{ name: 'Home', path: '/home', icon: FiAirplay },
 	{ name: 'Diary', path: '/diary', icon: FiCalendar },
 	{ name: 'Projects', path: '/projects', icon: FiFolder },
 	{ name: 'Notes', path: '/notes', icon: FiInbox },
@@ -23,11 +23,7 @@ const Navigation = [
 export default function AppLayout(props: { children: React.ReactNode }) {
 	return (
 		<div className='grid min-h-screen grid-cols-[12rem_auto]'>
-			<nav className='relative border-r border-neutral-800 bg-neutral-900 px-4 py-2 text-sm font-medium text-neutral-400'>
-				<div className='mb-8 mt-4 text-center font-title text-xl font-semibold uppercase text-neutral-400'>
-					Maanas
-				</div>
-
+			<nav className='relative border-r border-neutral-800 bg-neutral-900 px-4 pt-6 text-sm font-medium text-neutral-400'>
 				{Navigation.map((item) => {
 					return (
 						<Link
