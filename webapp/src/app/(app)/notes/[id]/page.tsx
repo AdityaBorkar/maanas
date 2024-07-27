@@ -1,16 +1,13 @@
 'use client'
 
-// import {
-// 	EditorBubble,
-// 	EditorBubbleItem,
-// 	EditorCommand,
-// 	EditorCommandItem,
-// 	EditorContent,
-// 	EditorRoot,
-// } from 'novel'
-import { Editor } from 'novel'
 import { useState } from 'react'
-import { LuFileText, LuInfo, LuLock, LuPresentation } from 'react-icons/lu'
+import {
+	LuFileText,
+	LuInfo,
+	LuLock,
+	LuMessageSquare,
+	LuPresentation,
+} from 'react-icons/lu'
 
 import ToggleSelector from '@/components/ToggleSelector'
 
@@ -18,6 +15,7 @@ export default function NotePage(props: { params: { id: string } }) {
 	const id = props.params.id
 
 	const [format, setFormat] = useState<'markdown' | 'canvas'>('markdown')
+	// TODO: Add Comments (with delete only option)
 
 	return (
 		<div className='max-h-screen overflow-auto'>
@@ -31,6 +29,9 @@ export default function NotePage(props: { params: { id: string } }) {
 							{ icon: LuFileText, value: 'markdown' },
 						]}
 					/>
+					<div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-neutral-400 hover:bg-neutral-900'>
+						<LuMessageSquare className='size-4' />
+					</div>
 					<div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-neutral-400 hover:bg-neutral-900'>
 						<LuLock className='size-4' />
 					</div>
@@ -48,22 +49,6 @@ export default function NotePage(props: { params: { id: string } }) {
             <div>Modified On</div>
             <div>Edit Log</div>
             </div> */}
-				{/* <EditorRoot>
-					<EditorContent>
-						<EditorCommand>
-							<EditorCommandItem  />
-							<EditorCommandItem />
-							<EditorCommandItem />
-						</EditorCommand>
-						<EditorBubble>
-							<EditorBubbleItem />
-							<EditorBubbleItem />
-							<EditorBubbleItem />
-						</EditorBubble>
-					</EditorContent>
-				</EditorRoot> */}
-
-				<Editor />
 
 				<div>Write anything you want in Notion/Coda Styled Blocks.</div>
 				<div>Attach Links / Images / Videos</div>
@@ -71,6 +56,8 @@ export default function NotePage(props: { params: { id: string } }) {
 		</div>
 	)
 }
+
+// TODO: Notion like editor and integrations
 
 function LinkBlock({ link }: { link: string }) {
 	return (

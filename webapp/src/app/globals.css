@@ -28,3 +28,9 @@ body {
 .inline-icon {
   @apply -mt-0.5 mr-2.5 inline-block size-4;
 }
+
+@layer base {
+  .flex-screen-center {
+    @apply flex min-h-screen items-center justify-center;
+  }
+}

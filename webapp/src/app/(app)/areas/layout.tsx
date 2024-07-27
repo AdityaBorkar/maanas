@@ -6,7 +6,7 @@ import { AREAS } from './list'
 export default function AreasLayout(props: { children: React.ReactNode }) {
 	return (
 		<div className='grid h-full grid-cols-[16rem_auto]'>
-			<nav className='border-r border-neutral-900 bg-neutral-950 px-6 pt-6'>
+			<nav className='relative border-r border-neutral-900 bg-neutral-950 px-6 pt-6'>
 				{AREAS.map((area) => (
 					<Link
 						key={area.name}
@@ -23,6 +23,13 @@ export default function AreasLayout(props: { children: React.ReactNode }) {
 						{area.name}
 					</Link>
 				))}
+
+				<Link
+					href='/areas/lost'
+					className='absolute bottom-5 w-[calc(100%-3rem)] text-center text-sm text-neutral-500'
+				>
+					Overwhelmed, or Lost?
+				</Link>
 			</nav>
 
 			<div>{props.children}</div>

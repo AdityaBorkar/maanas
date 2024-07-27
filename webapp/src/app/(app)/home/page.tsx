@@ -1,28 +1,51 @@
-import { LuClipboardCheck, LuSquareStack } from "react-icons/lu";
+import { LuCheckSquare, LuClipboardCheck, LuSquareStack } from 'react-icons/lu'
 
 export default function HomePage() {
-  const TASKS = [];
-  const RESOURCES = [];
+	const TASKS = [
+		{ name: 'Buy a new laptop', dueDate: new Date() },
+		{ name: 'Go to the gym', dueDate: new Date() },
+		{ name: 'Read a book', dueDate: new Date() },
+	]
+	const RESOURCES = []
 
-  return (
-    <div className="grid grid-cols-2 gap-32 mx-auto max-w-[48rem] pt-24">
-      <div className="w-96 border border-neutral-800 px-6 py-4 rounded-xl">
-        <h3 className="font-medium mb-8 text-neutral-300 text-base">
-          <LuClipboardCheck className="inline-block size-5 text-neutral-400 -mt-1 mr-2" />
-          Tasks for Today
-        </h3>
+	return (
+		<div className='mx-auto grid max-w-[48rem] grid-cols-2 gap-32 pt-24'>
+			<div className='w-96 rounded-xl border border-neutral-800 px-6 py-4'>
+				<h3 className='mb-8 text-base font-medium text-neutral-300'>
+					<LuClipboardCheck className='-mt-1 mr-2 inline-block size-5 text-neutral-400' />
+					Tasks for Today
+				</h3>
 
-        <div></div>
-      </div>
+				<div className=''>
+					{TASKS.map((task) => (
+						<div
+							className='flex items-center justify-between py-4 text-neutral-300'
+							key={task.name}
+						>
+							<div className='flex items-center space-x-2'>
+								<LuCheckSquare className='-mt-1 mr-2 inline-block size-5 text-neutral-400' />
+								<span>{task.name}</span>
+							</div>
+							<span className='text-neutral-400'>
+								{task.dueDate.toLocaleDateString('en-US', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric',
+								})}
+							</span>
+						</div>
+					))}
+				</div>
+			</div>
 
-      <div className="w-96 border border-neutral-800 px-6 py-4 rounded-xl">
-        <h3 className="font-medium mb-8 text-neutral-300 text-base">
-          <LuSquareStack className="inline-block size-5 text-neutral-400 -mt-1 mr-2" />
-          Resources to be sorted
-        </h3>
+			<div className='w-96 rounded-xl border border-neutral-800 px-6 py-4'>
+				<h3 className='mb-8 text-base font-medium text-neutral-300'>
+					<LuSquareStack className='-mt-1 mr-2 inline-block size-5 text-neutral-400' />
+					Resources to be sorted
+				</h3>
 
-        <div></div>
-      </div>
-    </div>
-  );
+				<div></div>
+			</div>
+		</div>
+	)
 }
