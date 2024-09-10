@@ -75,7 +75,7 @@ export default function DatePage(props: { params: { date: string } }) {
 									task.status === 'IN-PROGRESS' && 'bg-amber-600',
 								)}
 							/>
-							<div className='grow text-neutral-300'>{task.title}</div>
+							<div className='text-text-3 grow'>{task.title}</div>
 						</div>
 					))}
 				</div>
@@ -87,7 +87,7 @@ export default function DatePage(props: { params: { date: string } }) {
 							<div
 								className={twMerge('mr-2 mt-0.5 size-4 rounded bg-red-800')}
 							/>
-							<div className='grow text-neutral-300'>{task.title}</div>
+							<div className='text-text-3 grow'>{task.title}</div>
 						</div>
 					))}
 				</div>
@@ -99,7 +99,7 @@ export default function DatePage(props: { params: { date: string } }) {
 							<div
 								className={twMerge('mr-2 mt-0.5 size-4 rounded bg-red-800')}
 							/>
-							<div className='grow text-neutral-300'>{task.title}</div>
+							<div className='text-text-3 grow'>{task.title}</div>
 						</div>
 					))}
 				</div>
@@ -111,7 +111,7 @@ export default function DatePage(props: { params: { date: string } }) {
 							<div
 								className={twMerge('mr-2 mt-0.5 size-4 rounded bg-red-800')}
 							/>
-							<div className='grow text-neutral-300'>{task.title}</div>
+							<div className='text-text-3 grow'>{task.title}</div>
 						</div>
 					))}
 				</div>
@@ -122,7 +122,7 @@ export default function DatePage(props: { params: { date: string } }) {
 
 function H3(props: { children: React.ReactNode }) {
 	return (
-		<h3 className='mb-4 mt-12 text-xl font-medium text-neutral-200'>
+		<h3 className='text-text-2 mb-4 mt-12 text-xl font-medium'>
 			{props.children}
 		</h3>
 	)

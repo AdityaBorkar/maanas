@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { FaGithub, FaGoogle } from 'react-icons/fa'
 
-import Logo from './logo.png'
-import Button from '@/ui/Button'
+import Logo from '@/assets/logo.png'
+import Button from '@/components/ui/Button'
 
 // import { auth, signIn } from '@/auth'
 
@@ -12,8 +12,8 @@ export default async function Login() {
 
 	return (
 		<div className='flex-screen-center'>
-			<div className='-mt-16 rounded-3xl px-16 py-8 text-neutral-400 backdrop-blur-2xl'>
-				<h1 className='font-title mb-12 text-center text-4xl font-semibold text-neutral-100'>
+			<div className='text-text-4 -mt-16 rounded-3xl px-16 py-8 backdrop-blur-2xl'>
+				<h1 className='font-title text-text-1 mb-12 text-center text-4xl font-semibold'>
 					<Image
 						src={Logo}
 						alt=''

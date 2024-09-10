@@ -33,4 +33,20 @@ body {
   .flex-screen-center {
     @apply flex min-h-screen items-center justify-center;
   }
+
+  :root {
+    --text-1: 240 6% 10%;
+    --text-2: 240 4% 16%;
+    --text-3: 240 5% 26%;
+    --text-4: 240 5% 34%;
+    --text-5: 240 4% 46%;
+  }
+
+  .dark {
+    --text-1: 240 5% 96%;
+    --text-2: 240 6% 90%;
+    --text-3: 240 5% 84%;
+    --text-4: 240 5% 65%;
+    --text-5: 240 4% 46%;
+  }
 }

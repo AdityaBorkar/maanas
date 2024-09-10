@@ -59,7 +59,7 @@ function ProjectItem(props: ProjectType) {
 				.toLowerCase()
 				.replace(/[\s|\W]+/g, '-')
 				.replace(/-+/g, '-')}`}
-			className='block rounded-md px-4 py-1 text-sm text-neutral-300 hover:bg-neutral-900/80'
+			className='text-text-3 block rounded-md px-4 py-1 text-sm hover:bg-neutral-900/80'
 		>
 			{props.name}
 		</Link>

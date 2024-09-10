@@ -13,7 +13,7 @@ export default function TimeBlocking() {
 
 	return (
 		<div className='px-12 text-left'>
-			<div className='mt-8 text-2xl font-medium text-neutral-400'>
+			<div className='text-text-4 mt-8 text-2xl font-medium'>
 				{new Date(date).toLocaleDateString('en', {
 					day: 'numeric',
 					month: 'long',
@@ -28,7 +28,7 @@ export default function TimeBlocking() {
 							key={timePeriod}
 							className='border-t border-neutral-800 pb-6 text-sm'
 						>
-							<div className='text-neutral-400'>
+							<div className='text-text-4'>
 								{timePeriod.toString().padStart(2, '0')}:00
 							</div>
 						</div>

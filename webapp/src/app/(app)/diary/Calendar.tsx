@@ -35,13 +35,13 @@ export default function Calendar(props: {
 	return (
 		<div className={twMerge('mx-auto h-fit w-fit', props.className)}>
 			<div className='mb-8 flex flex-row justify-between'>
-				<div className='rounded-md pt-1 text-2xl font-medium text-neutral-400 hover:text-white'>
+				<div className='text-text-4 rounded-md pt-1 text-2xl font-medium hover:text-white'>
 					{FirstDate.toLocaleDateString('en', {
 						month: 'long',
 						year: 'numeric',
 					})}
 				</div>
-				<div className='flex flex-row divide-x divide-neutral-800 rounded-md border border-neutral-800 text-neutral-400'>
+				<div className='text-text-4 flex flex-row divide-x divide-neutral-800 rounded-md border border-neutral-800'>
 					<button
 						type='button'
 						className='px-2 py-2 hover:bg-neutral-900'

@@ -19,8 +19,8 @@ export default function ToggleSelector<VT>(props: {
 					className={twMerge(
 						'box-content block size-4 rounded-md px-1.5 py-1',
 						props.value === option.value
-							? 'bg-neutral-800 text-neutral-200'
-							: 'text-neutral-400 hover:bg-neutral-800/50',
+							? 'text-text-2 bg-neutral-800'
+							: 'text-text-4 hover:bg-neutral-800/50',
 					)}
 				/>
 			))}

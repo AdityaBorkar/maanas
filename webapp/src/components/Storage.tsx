@@ -1,21 +1,12 @@
 'use client'
 
-export default function Storage() {
-	handleMessage()
-	return (
-		<div>
-			<h1>Storage</h1>
-		</div>
-	)
-}
-
-async function handleMessage() {
+export default function useStorage() {
 	// Retrieve message sent to work from main script
 	const message = 'hello world'
 
 	// Get handle to draft file
-	const root = await navigator.storage.getDirectory()
-	const draftHandle = await root.getFileHandle('draft.txt', { create: true })
+	const root = navigator.storage.getDirectory()
+	const draftHandle = root.getFileHandle('draft.txt', { create: true })
 	console.log({ draftHandle })
 	// Get sync access handle
 	// const accessHandle = await draftHandle.createSyncAccessHandle()
@@ -36,4 +27,15 @@ async function handleMessage() {
 
 	// // Always close FileSystemSyncAccessHandle if done.
 	// accessHandle.close()
+
+	return (
+		<div>
+			<h1>Storage</h1>
+		</div>
+	)
+}
+
+export function StorageProvider({ children }: { children: React.ReactNode }) {
+	// TODO - INITIALIZE STORAGE
+	return <>{children}</>
 }

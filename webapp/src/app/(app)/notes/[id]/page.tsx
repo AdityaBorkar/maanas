@@ -29,19 +29,19 @@ export default function NotePage(props: { params: { id: string } }) {
 							{ icon: LuFileText, value: 'markdown' },
 						]}
 					/>
-					<div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-neutral-400 hover:bg-neutral-900'>
+					{/* <div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-text-4 hover:bg-neutral-900'>
 						<LuMessageSquare className='size-4' />
-					</div>
-					<div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-neutral-400 hover:bg-neutral-900'>
+					</div> */}
+					<div className='text-text-4 rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm hover:bg-neutral-900'>
 						<LuLock className='size-4' />
 					</div>
-					<div className='rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm text-neutral-400 hover:bg-neutral-900'>
+					<div className='text-text-4 rounded-md border border-neutral-800 bg-neutral-950 px-2 py-2 text-sm hover:bg-neutral-900'>
 						<LuInfo className='size-4' />
 					</div>
 				</div>
 			</aside>
-			<div className='mx-auto mb-16 mt-24 min-h-screen max-w-[56rem] rounded-xl border border-neutral-800 px-12 py-10 text-neutral-400'>
-				<h2 className='py-4 text-4xl font-bold text-neutral-200'>{id}</h2>
+			<div className='text-text-4 mx-auto mb-16 mt-24 min-h-screen max-w-[56rem] rounded-xl border border-neutral-800 px-12 py-10'>
+				<h2 className='text-text-2 py-4 text-4xl font-bold'>{id}</h2>
 
 				{/* <div className='text-right text-xs'>
             <div>Last Viewed</div>
@@ -64,7 +64,7 @@ function LinkBlock({ link }: { link: string }) {
 		<div className='flex flex-col gap-2'>
 			<div className='flex items-center gap-2'>
 				<div className='h-4 w-4 rounded-full bg-neutral-800' />
-				<div className='text-sm text-neutral-400'>{link}</div>
+				<div className='text-text-4 text-sm'>{link}</div>
 			</div>
 		</div>
 	)
@@ -75,7 +75,7 @@ function ImageBlock({ image }: { image: string }) {
 		<div className='flex flex-col gap-2'>
 			<div className='flex items-center gap-2'>
 				<div className='h-4 w-4 rounded-full bg-neutral-800' />
-				<div className='text-sm text-neutral-400'>{image}</div>
+				<div className='text-text-4 text-sm'>{image}</div>
 			</div>
 		</div>
 	)
@@ -86,7 +86,7 @@ function VideoBlock({ video }: { video: string }) {
 		<div className='flex flex-col gap-2'>
 			<div className='flex items-center gap-2'>
 				<div className='h-4 w-4 rounded-full bg-neutral-800' />
-				<div className='text-sm text-neutral-400'>{video}</div>
+				<div className='text-text-4 text-sm'>{video}</div>
 			</div>
 		</div>
 	)
@@ -95,7 +95,7 @@ function VideoBlock({ video }: { video: string }) {
 function TextBlock({ text }: { text: string }) {
 	return (
 		<div className='flex flex-col gap-2'>
-			<div className='text-sm text-neutral-400'>{text}</div>
+			<div className='text-text-4 text-sm'>{text}</div>
 		</div>
 	)
 }
@@ -103,7 +103,7 @@ function TextBlock({ text }: { text: string }) {
 function CodeBlock({ code }: { code: string }) {
 	return (
 		<div className='flex flex-col gap-2'>
-			<div className='bg-neutral-800 p-2 text-sm text-neutral-400'>{code}</div>
+			<div className='text-text-4 bg-neutral-800 p-2 text-sm'>{code}</div>
 		</div>
 	)
 }

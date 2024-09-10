@@ -7,7 +7,7 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 
 const fontSans = localFont({
-	src: '../fonts/GeistVF.woff',
+	src: '../assets/fonts/GeistVF.woff',
 	variable: '--font-sans',
 })
 
@@ -39,7 +39,7 @@ export default function RootLayout({
 						theme,
 						fontSans.variable,
 						titleFont.variable,
-						'min-h-screen select-none bg-background font-sans text-sm text-foreground antialiased',
+						'bg-background text-foreground min-h-screen select-none font-sans text-sm antialiased',
 					)}
 				>
 					{children}
