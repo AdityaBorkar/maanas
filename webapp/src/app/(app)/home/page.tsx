@@ -6,7 +6,18 @@ export default function HomePage() {
 		{ name: 'Go to the gym', dueDate: new Date() },
 		{ name: 'Read a book', dueDate: new Date() },
 	]
-	const RESOURCES = []
+	const RESOURCES = [
+		{
+			id: 12,
+			name: 'AI recommendations - make sure its completely accurate. Give 3-4 recommendations.',
+			recommendations: [
+				{ id: 1, name: 'AI recommendation 1' },
+				{ id: 2, name: 'AI recommendation 2' },
+				{ id: 3, name: 'AI recommendation 3' },
+				{ id: 4, name: 'AI recommendation 4' },
+			],
+		},
+	]
 
 	return (
 		<div className='mx-auto grid max-w-[48rem] grid-cols-2 gap-32 pt-24'>
@@ -41,10 +52,15 @@ export default function HomePage() {
 			<div className='w-96 rounded-xl border border-neutral-800 px-6 py-4'>
 				<h3 className='text-text-3 mb-8 text-base font-medium'>
 					<LuSquareStack className='text-text-4 -mt-1 mr-2 inline-block size-5' />
-					Resources to be sorted
+					Resources to be organized
+					{/* (AI recommendations - make sure it's completely accurate. Give 3-4 recommendations.) */}
 				</h3>
 
-				<div></div>
+				<div>
+					{RESOURCES.map((resource) => (
+						<div key={resource.id}>{resource.name}</div>
+					))}
+				</div>
 			</div>
 		</div>
 	)

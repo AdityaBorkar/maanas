@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
-import { twMerge } from 'tailwind-merge'
 
 import { AREAS } from './list'
 import { cn } from '@/lib/utils'
@@ -15,10 +14,7 @@ export default function AreasLayout(props: { children: React.ReactNode }) {
 				{AREAS.map((area) => (
 					<Link
 						key={area.name}
-						href={`/areas/${area.name
-							.toLowerCase()
-							.replace(/[\s|\W]+/g, '-')
-							.replace(/-+/g, '-')}`}
+						href={`/areas/${area.slug}`}
 						className={cn(
 							'group my-1 block rounded-md px-4 py-3 text-sm hover:bg-neutral-900/80',
 							segment === area.slug
