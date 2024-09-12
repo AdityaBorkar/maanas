@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
-import { Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import localFont from 'next/font/local'
 
 import './globals.css'
@@ -10,6 +10,11 @@ const fontSans = localFont({
 	src: '../assets/fonts/GeistVF.woff',
 	variable: '--font-sans',
 })
+
+// const fontSans = Inter({
+// 	subsets: ['latin'],
+// 	variable: '--font-sans',
+// })
 
 const titleFont = Playfair_Display({
 	subsets: ['latin'],

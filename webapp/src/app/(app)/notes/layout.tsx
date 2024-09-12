@@ -38,7 +38,7 @@ function NoteItem(props: NoteType) {
 		<Link
 			href={`/notes/${props.name
 				.toLowerCase()
-				.replace(/[\s|\W]+/g, '-')
+				.(/[\s|\W]+/g, '-')
 				.replace(/-+/g, '-')}`}
 			className='text-text-4 block rounded-md px-4 py-1 text-sm hover:bg-neutral-900/80'
 		>

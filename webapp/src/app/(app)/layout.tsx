@@ -31,7 +31,7 @@ export default function AppLayout(props: { children: React.ReactNode }) {
 	return (
 		<StorageProvider>
 			<div className='grid min-h-screen grid-cols-[12rem_auto]'>
-				<nav className='text-text-4 relative flex flex-col justify-between border-r border-neutral-800 bg-neutral-900 px-4 pt-6 text-sm font-medium'>
+				<nav className='relative flex flex-col justify-between border-r border-neutral-800 bg-neutral-900 px-4 pt-6 text-sm font-medium text-text-4'>
 					<div>
 						<div className='mb-8 flex items-center justify-between'>
 							<div>
@@ -60,7 +60,7 @@ export default function AppLayout(props: { children: React.ReactNode }) {
 								title={item.name}
 								href={`/${item.path}`}
 								className={cn(
-									'hover:text-text-2 my-0.5 block rounded-md px-4 py-2 hover:bg-neutral-800/80',
+									'my-0.5 block rounded-md px-4 py-2 hover:bg-neutral-800/80 hover:text-text-2',
 									segment === item.path && 'text-text-2',
 								)}
 							>

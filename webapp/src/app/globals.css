@@ -1,6 +1,8 @@
-@tailwind base;
+@import "tailwindcss";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 * {
   @apply font-sans cursor-default antialiased transition-all;
